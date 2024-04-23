@@ -111,7 +111,11 @@
     box-sizing: border-box;
     background-color: rgba(38, 142, 207, 0.32);
 }
-
+.credits{
+    margin-left: 600px;
+    font-family: Seurat;
+    font-size: 20px;
+}
 .body{
     background-color: transparent;
 }
