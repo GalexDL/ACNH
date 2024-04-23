@@ -1,0 +1,54 @@
+<html>
+    <header>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script src="html2canvas.min.js"></script>
+    </header>
+<body>
+    <div id="parentDiv">
+        <!-- Textbox -->
+        <img class="textboximage" src="textbox.png" alt="textbox">
+
+        <!-- Namebox -->
+        <img class="smallname" src="namebox1.png" alt="textbox">
+        <img class="midname" src="namebox2.png" alt="textbox">
+        <img class="largename" src="namebox3.png" alt="textbox">
+
+        <!-- Name -->
+        <h class="name">Galex</h>
+
+        <!-- Text -->
+        <p class="textbox" id="output"></p>
+    </div>
+
+    <div2>
+        <input type="text" id="input"onkeyup="OutputText()" class="inputtext">
+        <input type="color" id="colorPicker">
+    </div2>
+
+    <button id="dl-png">Download Image</button>
+</body>
+
+<script>
+    const elementToCapture = document.getElementById("parentDiv");
+    const downloadButton =document.getElementById("dl-png");
+
+    downloadButton.addEventListener("click", function(){
+        html2canvas(elementToCapture,{
+            allowTaint: true,
+            useCORS: true,
+        }).then((canvas) => {
+            const downloadLink = document.createElement("a");
+            downloadLink.href = canvas.toDataURL("image/png");
+            downloadLink.download = "screenshot.png";
+            downloadLink.click();
+
+        })
+    })
+
+</script>
+
+<style>
+
+</style>
+</html>

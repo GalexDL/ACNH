@@ -1,0 +1,72 @@
+.smallname {
+    position: absolute;
+    pointer-events: none;
+}
+.midname {
+    position: absolute;
+    pointer-events: none;
+}
+.largename {
+    position: absolute;
+    pointer-events: none;
+    filter: invert(1);
+    /* or to blue */
+    filter: invert(0.5) sepia(1) saturate(3) hue-rotate(175deg);
+
+}
+.textboximage {
+    position: absolute;
+    pointer-events: none;
+
+}
+
+
+
+@font-face {
+    font-family: Seurat;
+    src: url(FOT-Seurat_Pro_B.otf);
+}
+@font-face {
+    font-family: Bokutoh;
+    src: url(FOT-RodinBokutoh_Pro_EB.otf);
+}
+
+.name {
+    position: absolute;
+    pointer-events: none;
+    text-align: right;
+    font-family: Seurat;
+    font-size: 47px;
+    transform: rotate(-5.9deg);
+    color: #ffffff;
+    margin-left: 122px;
+    margin-top: 34px;
+    white-space: nowrap;
+    width: 70px;
+}
+.textbox {
+    position: absolute;
+
+    max-width: 1220px; /* Adjust this value to your desired width */
+    line-height: 140%;
+    word-wrap: break-word;
+    text-align: center;
+
+    color: inherit; /* Inherit color from parent */
+
+
+    font-family: Bokutoh;
+    font-size: 60px;
+    color: #716F5A;
+    margin-left: 113px;
+    margin-top: 112px;
+}
+.inputtext{
+    margin-top: 500px;
+    margin-left: 300px;
+    width:900px;
+}
+
+.body{
+    background-color: transparent;
+}
