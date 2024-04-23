@@ -1,10 +1,17 @@
 .smallname {
     position: absolute;
     pointer-events: none;
+    display: none;
+    filter: invert(1);
+    /* or to blue */
+    filter: invert(0.5) sepia(1) saturate(3) hue-rotate(175deg);
 }
 .midname {
     position: absolute;
     pointer-events: none;
+    filter: invert(1);
+    /* or to blue */
+    filter: invert(0.5) sepia(1) saturate(3) hue-rotate(175deg);
 }
 .largename {
     position: absolute;
@@ -12,6 +19,7 @@
     filter: invert(1);
     /* or to blue */
     filter: invert(0.5) sepia(1) saturate(3) hue-rotate(175deg);
+    display: none;
 
 }
 .textboximage {
@@ -46,7 +54,7 @@
 }
 .textbox {
     position: absolute;
-
+    pointer-events: none;
     max-width: 1220px; /* Adjust this value to your desired width */
     line-height: 140%;
     word-wrap: break-word;
@@ -61,10 +69,47 @@
     margin-left: 113px;
     margin-top: 112px;
 }
-.inputtext{
-    margin-top: 500px;
+
+
+
+
+.inputtextname{
+    margin-top: 0px;
+    margin-left: 300px;
+    width:170px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #908f8f;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.inputtextpara{
+    margin-top: 10px;
     margin-left: 300px;
     width:900px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #908f8f;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.download{
+
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #908f8f;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(148, 207, 38, 0.32);
+}
+.sizebtn{
+
+    padding: 6px 20px;
+    display: inline-block;
+    border: 1px solid #908f8f;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(38, 142, 207, 0.32);
 }
 
 .body{

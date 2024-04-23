@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <header>
         <link rel="stylesheet" href="style.css">
@@ -5,7 +6,7 @@
         <script src="html2canvas.min.js"></script>
     </header>
 <body>
-    <div id="parentDiv">
+    <div id="parentDiv" style="width: 1500px; height: 520px;" >
         <!-- Textbox -->
         <img class="textboximage" src="textbox.png" alt="textbox">
 
@@ -15,18 +16,28 @@
         <img class="largename" src="namebox3.png" alt="textbox">
 
         <!-- Name -->
-        <h class="name">Galex</h>
+        <h class="name" id="outputN">Galex</h>
 
         <!-- Text -->
-        <p class="textbox" id="output"></p>
+        <p class="textbox" id="output">
+            Sample text sounds tasty... aw man, now I'm hungry! Do you got any <span style="color:#0AC1BC">fruit?</span>
+        </p>
     </div>
 
     <div2>
-        <input type="text" id="input"onkeyup="OutputText()" class="inputtext">
-        <input type="color" id="colorPicker">
+        <!-- Name Input -->
+        <input type="text" id="inputN"onkeyup="OutputNText()" class="inputtextname" maxlength="10" placeholder="Name">
+        <!-- Download Button -->
+        <button id="dl-png"class="download">Download</button>
+        <!-- NameTag Size Button -->
+        <button class="sizebtn">Small</button>
+        <button class="sizebtn">Medium</button>
+        <button class="sizebtn">Large</button>
+        <!-- NameTag Color -->
+        <!-- Paragraph Input -->
+        <input type="text" id="input"onkeyup="OutputText()" class="inputtextpara" placeholder="Sample text sounds tasty...">
     </div2>
 
-    <button id="dl-png">Download Image</button>
 </body>
 
 <script>
@@ -37,6 +48,7 @@
         html2canvas(elementToCapture,{
             allowTaint: true,
             useCORS: true,
+            backgroundColor: null,
         }).then((canvas) => {
             const downloadLink = document.createElement("a");
             downloadLink.href = canvas.toDataURL("image/png");
@@ -45,10 +57,6 @@
 
         })
     })
-
 </script>
 
-<style>
-
-</style>
 </html>
